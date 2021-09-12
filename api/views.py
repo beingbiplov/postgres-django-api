@@ -14,3 +14,8 @@ def index(request):
 class StudentListView(ListCreateAPIView):
 	queryset = Student.objects.all()
 	serializer_class = StudentSerializer
+
+
+class StudentDetailView(RetrieveUpdateDestroyAPIView):
+	queryset = Student.objects.all()
+	serializer_class = StudentSerializer
